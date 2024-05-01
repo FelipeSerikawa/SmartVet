@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{FB3521D3-A3E2-413E-B9F9-70D84200B101}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Application", "1. Application", "{634957B5-8DF6-40CA-855E-D3AAF41ED8D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{41712F71-9E55-43E9-BA4F-11A1150F5A89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. User Interface", "4. User Interface", "{1AF76383-9EAB-41E5-B688-60EDBA296DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVet.Application", "..\SmartVet.Application\SmartVet.Application.csproj", "{9B4F442F-589E-422A-86F8-FC6B0BB59EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVet.Domain", "..\SmartVet.Domain\SmartVet.Domain.csproj", "{03B47F6C-3E70-4EC8-AD81-D950483D883D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVet.Infrastructure", "..\SmartVet.Infrastructure\SmartVet.Infrastructure.csproj", "{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartVet.API", "..\SmartVet.API\SmartVet.API.csproj", "{277E097B-09F9-4EB9-8717-0580EC256A51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 API", "4.1 API", "{76B189B5-59AD-465E-AD17-57DFF951268F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 WEB", "4.2 WEB", "{3343560D-ADAF-4E28-9028-16229C6945D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B4F442F-589E-422A-86F8-FC6B0BB59EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4F442F-589E-422A-86F8-FC6B0BB59EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4F442F-589E-422A-86F8-FC6B0BB59EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4F442F-589E-422A-86F8-FC6B0BB59EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B47F6C-3E70-4EC8-AD81-D950483D883D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B47F6C-3E70-4EC8-AD81-D950483D883D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B47F6C-3E70-4EC8-AD81-D950483D883D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B47F6C-3E70-4EC8-AD81-D950483D883D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277E097B-09F9-4EB9-8717-0580EC256A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277E097B-09F9-4EB9-8717-0580EC256A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277E097B-09F9-4EB9-8717-0580EC256A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277E097B-09F9-4EB9-8717-0580EC256A51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B4F442F-589E-422A-86F8-FC6B0BB59EBB} = {634957B5-8DF6-40CA-855E-D3AAF41ED8D4}
+		{03B47F6C-3E70-4EC8-AD81-D950483D883D} = {FB3521D3-A3E2-413E-B9F9-70D84200B101}
+		{FAB2C8D8-78AB-4420-8F3D-2E55A6EA91F6} = {41712F71-9E55-43E9-BA4F-11A1150F5A89}
+		{277E097B-09F9-4EB9-8717-0580EC256A51} = {76B189B5-59AD-465E-AD17-57DFF951268F}
+		{76B189B5-59AD-465E-AD17-57DFF951268F} = {1AF76383-9EAB-41E5-B688-60EDBA296DC2}
+		{3343560D-ADAF-4E28-9028-16229C6945D4} = {1AF76383-9EAB-41E5-B688-60EDBA296DC2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3439E8E0-F1F2-44DE-8AF1-30DBF60AFF3C}
+	EndGlobalSection
+EndGlobal
