@@ -21,16 +21,18 @@ namespace SmartVet.Infrastructure.Data.Repositories
             _dbSet = _appDbContext.Set<T>();
         }
 
-        public async Task Add(T entity)
+        public async Task<T> Add(T entity)
         {
             _dbSet.Add(entity);
             await _appDbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task Delete(T entity)
+        public async Task<T> Delete(T entity)
         {
             _dbSet.Remove(entity);
             await _appDbContext.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<IEnumerable<T>> GetAll()
@@ -43,10 +45,11 @@ namespace SmartVet.Infrastructure.Data.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task Update(T entity)
+        public async Task<T> Update(T entity)
         {
             _dbSet.Update(entity);
             await _appDbContext.SaveChangesAsync();
+            return entity;
         }
     }
 }

@@ -11,16 +11,15 @@ namespace SmartVet.Application.DTOs
     public class CustomerDTO
     {
         public int Id { get; set; }
-        public required string Name { get; set; }
-        public required string Phone { get; set; }
-        public required string Email { get; set; }
-        public required string Address { get; set; }
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
         public DateTimeOffset DateOfBirth { get; set; }
-        public required string IdentificationDocument { get; set; }
+        public string IdentificationDocument { get; set; }
         public DateTimeOffset? CreatedDate { get; set; }
         public int? CreatedBy { get; set; }
         public DateTimeOffset? LastModifiedDate { get; set; }
         public int? LastModifiedBy { get; set; }
-        public required ICollection<Animal> Animals { get; set; }
     }
 }

@@ -8,15 +8,15 @@ namespace SmartVet.Domain.Entities
 {
     public sealed class Customer : Person
     {
-        public Customer(int id, string name, string phone, string email, string address, DateTimeOffset dateOfBirth, string identificationDocument) : base(name, phone, email, address, dateOfBirth, identificationDocument)
+        public Customer(string name, string phone, string email, string address, DateTimeOffset dateOfBirth, string identificationDocument, int createdBy) : base(name, phone, email, address, dateOfBirth, identificationDocument)
         {
-            Id = id;
             Name = name;
             Phone = phone;
             Email = email;
             Address = address;
             DateOfBirth = dateOfBirth;
             IdentificationDocument = identificationDocument;
+            CreatedBy = createdBy;
         }
 
         public ICollection<Animal>? Animals { get; set; }

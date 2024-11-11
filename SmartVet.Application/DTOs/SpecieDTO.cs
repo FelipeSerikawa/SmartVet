@@ -11,11 +11,10 @@ namespace SmartVet.Application.DTOs
     public class SpecieDTO
     {
         public int Id { get; set; }
-        public required string Name { get; set; }
+        public string? Name { get; set; }
         public DateTimeOffset? CreatedDate { get; set; }
         public int? CreatedBy { get; set; }
         public DateTimeOffset? LastModifiedDate { get; set; }
         public int? LastModifiedBy { get; set; }
-        public required ICollection<Animal> Animals { get; set; }
     }
 }

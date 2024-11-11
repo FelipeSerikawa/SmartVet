@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SmartVet.Application.Interfaces
 {
-    public interface IAnimalService
+    public interface ICustomerService : IBaseService<CustomerDTO>
     {
-        Task<AnimalDTO> GetAnimal(int id);
+        
     }
 }

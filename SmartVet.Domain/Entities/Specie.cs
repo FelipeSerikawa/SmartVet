@@ -8,9 +8,8 @@ namespace SmartVet.Domain.Entities
 {
     public sealed class Specie : Base
     {
-        public Specie(int id, string name)
+        public Specie(string name)
         {
-            Id = id;
             Name = name;
         }
         public string Name { get; set; }
