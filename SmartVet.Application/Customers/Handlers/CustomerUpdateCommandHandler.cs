@@ -23,7 +23,7 @@ namespace SmartVet.Application.Customers.Handlers
         {
             var customer = await _baseRepository.GetById(request.Id);
 
-            if (customer == null) throw new ApplicationException("Entity could not be found.");
+            if (customer == null) throw new ApplicationException("Customer not found to update!");
 
             customer.Name = request.Name;
             customer.Phone = request.Phone;

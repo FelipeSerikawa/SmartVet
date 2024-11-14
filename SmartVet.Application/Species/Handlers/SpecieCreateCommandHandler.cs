@@ -23,14 +23,10 @@ namespace SmartVet.Application.Species.Handlers
         {
             var specie = new Specie(request.Name);
 
-            if (specie == null)
-            {
-                throw new ApplicationException("Error creating entity"); 
-            }
-            else
-            {
-                return await _baseRepository.Add(specie);
-            }
+            specie.CreatedDate = DateTime.Now;
+            specie.CreatedBy = 0;
+
+            return await _baseRepository.Add(specie);
         }
     }
 }

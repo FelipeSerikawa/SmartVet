@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartVet.Application.Species.Commands
+namespace SmartVet.Application.DTOs.Specie
 {
-    public class SpecieUpdateCommand : SpecieCommand
+    public class SpecieUpdateDTO
     {
         public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

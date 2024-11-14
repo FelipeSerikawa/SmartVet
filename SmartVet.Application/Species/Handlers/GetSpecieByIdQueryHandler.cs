@@ -22,7 +22,11 @@ namespace SmartVet.Application.Species.Handlers
 
         public async Task<Specie> Handle(GetSpecieByIdQuery request, CancellationToken cancellationToken)
         {
-            return await _baseRepository.GetById(request.Id);   
+            var specie = await _baseRepository.GetById(request.Id);
+
+            if (specie == null) throw new ApplicationException("Specie not found");
+
+            return specie;
         }
     }
 }

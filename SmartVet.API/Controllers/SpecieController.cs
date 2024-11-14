@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartVet.Application.DTOs.Specie;
 using SmartVet.Application.Interfaces;
-using SmartVet.Application.Services;
 
 namespace SmartVet.API.Controllers
 {
@@ -17,33 +16,38 @@ namespace SmartVet.API.Controllers
         }
 
         [HttpGet("GetSpecieById")]
-        public async Task<SpecieDTO> GetSpecieById(int id)
+        public async Task<IActionResult> GetSpecieById(int id)
         {
-            return await _specieService.GetById(id);
+            var specie = await _specieService.GetById(id);
+            return Ok(specie);
         }
 
         [HttpGet("GetSpecies")]
-        public async Task<IEnumerable<SpecieDTO>> GetSpecies()
+        public async Task<IActionResult> GetSpecies()
         {
-            return await _specieService.GetAll();
+            var species = await _specieService.GetAll();
+            return Ok(species);
         }
 
         [HttpPost("AddSpecie")]
-        public async Task AddSpecie(SpecieDTO specie)
+        public async Task<IActionResult> AddSpecie(SpecieCreateDTO specie)
         {
             await _specieService.Add(specie);
+            return Ok();
         }
 
         [HttpPut("UpdateSpecie")]
-        public async Task UpdateSpecie(SpecieDTO specie)
+        public async Task<IActionResult> UpdateSpecie(SpecieUpdateDTO specie)
         {
             await _specieService.Update(specie);
+            return Ok();
         }
 
         [HttpDelete("RemoveSpecie")]
-        public async Task RemoveSpecie(int id)
+        public async Task<IActionResult> RemoveSpecie(int id)
         {
             await _specieService.Remove(id);
+            return Ok();
         }
     }
 }

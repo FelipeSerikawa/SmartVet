@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
-using SmartVet.Application.DTOs.Specie;
-using SmartVet.Application.Interfaces;
 using SmartVet.Application.Species.Commands;
 using SmartVet.Application.Species.Queries;
-using SmartVet.Domain.Entities;
-using SmartVet.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SmartVet.Application.DTOs.Specie;
+using SmartVet.Application.Interfaces;
 
 namespace SmartVet.Application.Services
 {
@@ -19,64 +12,45 @@ namespace SmartVet.Application.Services
         private readonly IMapper _mapper;
         private readonly IMediator _mediator;
 
-        public SpecieService(IMediator mediator, IMapper mapper)
+        public SpecieService(IMapper mapper, IMediator mediator)
         {
-            _mediator = mediator;
             _mapper = mapper;
+            _mediator = mediator;
         }
 
-        public async Task Add(SpecieDTO dto)
+        public async Task Add(SpecieCreateDTO dto)
         {
-            dto.CreatedDate = DateTime.Now;
-            dto.CreatedBy = 0;
             var specieCreateCommand = _mapper.Map<SpecieCreateCommand>(dto);
             await _mediator.Send(specieCreateCommand);
         }
 
-        public async Task<IEnumerable<SpecieDTO>> GetAll()
+        public async Task<IEnumerable<SpecieResponseDTO>> GetAll()
         {
             var specieQuery = new GetSpecieQuery();
 
-            if (specieQuery == null)
-            {
-                throw new Exception("Entity could not be loaded.");
-            }
-
             var result = await _mediator.Send(specieQuery);
 
-            return _mapper.Map<IEnumerable<SpecieDTO>>(result);
+            return _mapper.Map<IEnumerable<SpecieResponseDTO>>(result);
         }
 
-        public async Task<SpecieDTO> GetById(int id)
+        public async Task<SpecieResponseDTO> GetById(int id)
         {
             var specieQuery = new GetSpecieByIdQuery(id);
 
-            if (specieQuery == null)
-            {
-                throw new Exception("Entity could not be loaded.");
-            }
-
             var result = await _mediator.Send(specieQuery);
 
-            return _mapper.Map<SpecieDTO>(result);
+            return _mapper.Map<SpecieResponseDTO>(result);
         }
 
-        public async Task Update(SpecieDTO dto)
+        public async Task Update(SpecieUpdateDTO dto)
         {
-            dto.LastModifiedDate = DateTime.Now;
-            dto.LastModifiedBy = 0;
-            var specieQueryUpdateCommand = _mapper.Map<SpecieUpdateCommand>(dto);
-            await _mediator.Send(specieQueryUpdateCommand);
+            var specieUpdateCommand = _mapper.Map<SpecieUpdateCommand>(dto);
+            await _mediator.Send(specieUpdateCommand);
         }
 
         public async Task Remove(int id)
         {
             var specieRemoveCommand = new SpecieRemoveCommand(id);
-
-            if (specieRemoveCommand == null)
-            {
-                throw new Exception("Entity could not be loaded.");
-            }
 
             await _mediator.Send(specieRemoveCommand);
         }

@@ -23,14 +23,9 @@ namespace SmartVet.Application.Species.Handlers
         {
             var specie = await _baseRepository.GetById(request.Id);
 
-            if (specie == null)
-            {
-                throw new ApplicationException("Entity could not be found.");
-            }
-            else
-            {
-                return await _baseRepository.Delete(specie);
-            }
+            if (specie == null) throw new ApplicationException("Specie not found to remove!");
+
+            return await _baseRepository.Delete(specie);
         }
     }
 }

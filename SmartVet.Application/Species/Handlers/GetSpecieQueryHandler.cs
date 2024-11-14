@@ -21,7 +21,11 @@ namespace SmartVet.Application.Species.Handlers
 
         public async Task<IEnumerable<Specie>> Handle(GetSpecieQuery request, CancellationToken cancellationToken)
         {
-            return await _baseRepository.GetAll();
+            var specie = await _baseRepository.GetAll();
+
+            if (specie.Count() == 0) throw new ApplicationException("No species found!");
+
+            return specie;
         }
     }
 }
