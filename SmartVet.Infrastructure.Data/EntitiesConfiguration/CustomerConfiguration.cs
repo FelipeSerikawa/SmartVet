@@ -14,6 +14,11 @@ namespace SmartVet.Infrastructure.Data.EntitiesConfiguration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasMaxLength(250).IsRequired();
+            builder.Property(x => x.Phone).HasMaxLength(250).IsRequired();
+            builder.Property(x => x.Email).HasMaxLength(250).IsRequired();
+            builder.Property(x => x.Address).HasMaxLength(250).IsRequired();
+            builder.Property(x => x.DateOfBirth).IsRequired();
+            builder.Property(x => x.IdentificationDocument).HasMaxLength(250).IsRequired();
         }
     }
 }

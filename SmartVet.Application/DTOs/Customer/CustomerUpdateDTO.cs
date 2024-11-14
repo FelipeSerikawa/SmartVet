@@ -1,10 +1,14 @@
-﻿using MediatR;
-using SmartVet.Domain.Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SmartVet.Application.Customers.Commands
+namespace SmartVet.Application.DTOs.Customer
 {
-    public abstract class CustomerCommand : IRequest<Customer>
+    public class CustomerUpdateDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }

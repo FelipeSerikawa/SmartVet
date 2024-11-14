@@ -19,7 +19,7 @@ namespace SmartVet.Domain.Entities
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public int SpecieId { get; set; }
-        public DateTimeOffset? DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public float? Weight { get; set; }
         public Customer? Customer { get; set; }
         public Specie? Specie { get; set; }

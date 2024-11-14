@@ -1,4 +1,4 @@
-﻿using SmartVet.Application.DTOs;
+﻿using SmartVet.Application.DTOs.Specie;
 using SmartVet.Domain.Entities;
 
 namespace SmartVet.Application.Interfaces

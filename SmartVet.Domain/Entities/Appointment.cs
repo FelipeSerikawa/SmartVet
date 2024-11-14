@@ -11,7 +11,7 @@ namespace SmartVet.Domain.Entities
         public int CustomerId { get; set; }
         public int AnimalId { get; set; }
         public int EmployeeId { get; set; }
-        public DateTimeOffset AppointmentDate { get; set; }
+        public DateTime AppointmentDate { get; set; }
         public required string Reason { get; set; }
         public string? Diagnosis { get; set; }
         public string? Treatment { get; set; }

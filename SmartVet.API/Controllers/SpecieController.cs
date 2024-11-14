@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartVet.Application.DTOs;
+using SmartVet.Application.DTOs.Specie;
 using SmartVet.Application.Interfaces;
 using SmartVet.Application.Services;
 

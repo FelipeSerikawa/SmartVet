@@ -8,7 +8,7 @@ namespace SmartVet.Domain.Entities
 {
     public abstract class Person : Base
     {
-        protected Person(string name, string phone, string email, string address, DateTimeOffset dateOfBirth, string identificationDocument)
+        protected Person(string name, string phone, string email, string address, DateTime dateOfBirth, string identificationDocument)
         {
             Name = name;
             Phone = phone;
@@ -22,7 +22,7 @@ namespace SmartVet.Domain.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public DateTimeOffset DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string IdentificationDocument { get; set; }
     }
 }

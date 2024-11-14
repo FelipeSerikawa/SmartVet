@@ -23,14 +23,9 @@ namespace SmartVet.Application.Customers.Handlers
         {
             var customer = await _baseRepository.GetById(request.Id);
 
-            if (customer == null)
-            {
-                throw new ApplicationException("Entity could not be found.");
-            }
-            else
-            {
-                return await _baseRepository.Delete(customer);
-            }
+            if (customer == null) throw new ApplicationException("Customer not found to remove");
+
+            return await _baseRepository.Delete(customer);
         }
     }
 }

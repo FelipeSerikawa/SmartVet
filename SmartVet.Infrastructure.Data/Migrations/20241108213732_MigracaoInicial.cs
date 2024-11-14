@@ -17,15 +17,15 @@ namespace SmartVet.Infrastructure.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     CreatedBy = table.Column<int>(type: "int", nullable: true),
-                    LastModifiedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     LastModifiedBy = table.Column<int>(type: "int", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateOfBirth = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
+                    DateOfBirth = table.Column<DateTime>(type: "DateTime", nullable: false),
                     IdentificationDocument = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -40,9 +40,9 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     CreatedBy = table.Column<int>(type: "int", nullable: true),
-                    LastModifiedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     LastModifiedBy = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -59,11 +59,11 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     SpecieId = table.Column<int>(type: "int", nullable: false),
-                    DateOfBirth = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    DateOfBirth = table.Column<DateTime>(type: "DateTime", nullable: true),
                     Weight = table.Column<float>(type: "real", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     CreatedBy = table.Column<int>(type: "int", nullable: true),
-                    LastModifiedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "DateTime", nullable: true),
                     LastModifiedBy = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

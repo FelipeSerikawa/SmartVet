@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using SmartVet.Application.DTOs;
+using SmartVet.Application.DTOs.Specie;
 using SmartVet.Application.Interfaces;
 using SmartVet.Application.Species.Commands;
 using SmartVet.Application.Species.Queries;
@@ -27,7 +27,7 @@ namespace SmartVet.Application.Services
 
         public async Task Add(SpecieDTO dto)
         {
-            dto.CreatedDate = DateTime.UtcNow;
+            dto.CreatedDate = DateTime.Now;
             dto.CreatedBy = 0;
             var specieCreateCommand = _mapper.Map<SpecieCreateCommand>(dto);
             await _mediator.Send(specieCreateCommand);
@@ -63,7 +63,7 @@ namespace SmartVet.Application.Services
 
         public async Task Update(SpecieDTO dto)
         {
-            dto.LastModifiedDate = DateTime.UtcNow;
+            dto.LastModifiedDate = DateTime.Now;
             dto.LastModifiedBy = 0;
             var specieQueryUpdateCommand = _mapper.Map<SpecieUpdateCommand>(dto);
             await _mediator.Send(specieQueryUpdateCommand);

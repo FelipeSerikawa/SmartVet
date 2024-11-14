@@ -21,16 +21,12 @@ namespace SmartVet.Application.Customers.Handlers
 
         public async Task<Customer> Handle(CustomerCreateCommand request, CancellationToken cancellationToken)
         {
-            var customer = new Customer(request.Name, request.Phone, request.Email, request.Address, request.DateOfBirth, request.IdentificationDocument, request.CreatedBy);
+            var customer = new Customer(request.Name, request.Phone, request.Email, request.Address, request.DateOfBirth, request.IdentificationDocument);
 
-            if (customer == null)
-            {
-                throw new ApplicationException("Error creating entity"); 
-            }
-            else
-            {
-                return await _baseRepository.Add(customer);
-            }
+            customer.CreatedDate = DateTime.Now;
+            customer.CreatedBy = 0;
+
+            return await _baseRepository.Add(customer);
         }
     }
 }

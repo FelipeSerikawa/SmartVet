@@ -1,19 +1,20 @@
-﻿using System;
+﻿using SmartVet.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartVet.Application.DTOs
+namespace SmartVet.Application.DTOs.Specie
 {
-    public class RoleDTO
+    public class SpecieDTO
     {
         public int Id { get; set; }
-        public required string Description { get; set; }
-        public DateTimeOffset? CreatedDate { get; set; }
+        public string? Name { get; set; }
+        public DateTime? CreatedDate { get; set; }
         public int? CreatedBy { get; set; }
-        public DateTimeOffset? LastModifiedDate { get; set; }
+        public DateTime? LastModifiedDate { get; set; }
         public int? LastModifiedBy { get; set; }
     }
 }

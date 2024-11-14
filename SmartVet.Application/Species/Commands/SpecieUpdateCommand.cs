@@ -9,6 +9,6 @@ namespace SmartVet.Application.Species.Commands
     public class SpecieUpdateCommand : SpecieCommand
     {
         public int Id { get; set; }
-        public DateTimeOffset? LastModifiedDate { get; set; } = DateTime.UtcNow;
+        public DateTime? LastModifiedDate { get; set; } = DateTime.Now;
     }
 }

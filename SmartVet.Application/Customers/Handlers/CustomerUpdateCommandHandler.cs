@@ -23,21 +23,18 @@ namespace SmartVet.Application.Customers.Handlers
         {
             var customer = await _baseRepository.GetById(request.Id);
 
-            if (customer == null) 
-            { 
-                throw new ApplicationException("Entity could not be found."); 
-            }
-            else
-            {
-                customer.Name = request.Name;
-                customer.Phone = request.Phone;
-                customer.Email = request.Email;
-                customer.Address = request.Address;
-                customer.DateOfBirth = request.DateOfBirth;
-                customer.IdentificationDocument = request.IdentificationDocument;
+            if (customer == null) throw new ApplicationException("Entity could not be found.");
 
-                return await _baseRepository.Update(customer);
-            }
+            customer.Name = request.Name;
+            customer.Phone = request.Phone;
+            customer.Email = request.Email;
+            customer.Address = request.Address;
+            customer.DateOfBirth = request.DateOfBirth;
+            customer.IdentificationDocument = request.IdentificationDocument;
+            customer.LastModifiedBy = 0;
+            customer.LastModifiedDate = DateTime.Now;
+
+            return await _baseRepository.Update(customer);
         }
     }
 }

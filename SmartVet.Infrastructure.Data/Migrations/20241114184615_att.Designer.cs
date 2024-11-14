@@ -12,8 +12,8 @@ using SmartVet.Infrastructure.Data.Context;
 namespace SmartVet.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241108214653_Dados")]
-    partial class Dados
+    [Migration("20241114184615_att")]
+    partial class att
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,19 +37,19 @@ namespace SmartVet.Infrastructure.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DateOfBirth")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -87,10 +87,10 @@ namespace SmartVet.Infrastructure.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -104,7 +104,7 @@ namespace SmartVet.Infrastructure.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -131,13 +131,13 @@ namespace SmartVet.Infrastructure.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DateTime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -147,13 +147,6 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Species");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Dog"
-                        });
                 });
 
             modelBuilder.Entity("SmartVet.Domain.Entities.Animal", b =>

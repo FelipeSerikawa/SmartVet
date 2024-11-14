@@ -21,7 +21,12 @@ namespace SmartVet.Application.Customers.Handlers
 
         public async Task<IEnumerable<Customer>> Handle(GetCustomerQuery request, CancellationToken cancellationToken)
         {
-            return await _baseRepository.GetAll();
+            var customers = await _baseRepository.GetAll();
+
+            if (customers.Count() == 0) throw new ApplicationException("No customers found!");
+
+            return customers;
+
         }
     }
 }

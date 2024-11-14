@@ -8,6 +8,6 @@ namespace SmartVet.Application.Species.Commands
 {
     public class SpecieCreateCommand : SpecieCommand
     {
-        public DateTimeOffset CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

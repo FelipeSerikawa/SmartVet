@@ -36,20 +36,20 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("DateOfBirth")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("DateTime");
 
                     b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("LastModifiedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -86,11 +86,11 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("DateTime");
 
-                    b.Property<DateTimeOffset>("DateOfBirth")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -103,8 +103,8 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("LastModifiedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -130,14 +130,14 @@ namespace SmartVet.Infrastructure.Data.Migrations
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("LastModifiedDate")
-                        .HasColumnType("datetimeoffset");
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("DateTime");
 
                     b.Property<string>("Name")
                         .IsRequired()

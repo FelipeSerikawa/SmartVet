@@ -9,7 +9,5 @@ namespace SmartVet.Application.Customers.Commands
     public class CustomerUpdateCommand : CustomerCommand
     {
         public int Id { get; set; }
-        public DateTimeOffset LastModifiedDate { get; set; } = DateTime.UtcNow;
-        public int? LastModifiedBy { get; set; }
     }
 }

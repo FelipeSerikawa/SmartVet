@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using AutoMapper;
 using SmartVet.Application.Customers.Commands;
 using SmartVet.Application.Species.Commands;
-using SmartVet.Application.DTOs;
+using SmartVet.Application.DTOs.Customer;
+using SmartVet.Application.Customers.Queries;
+using SmartVet.Application.DTOs.Specie;
 
 namespace SmartVet.Application.Mappings
 {
@@ -14,8 +16,10 @@ namespace SmartVet.Application.Mappings
     {
         public DTOToCommandMappingProfile()
         {
-            CreateMap<CustomerDTO, CustomerCreateCommand>();
-            CreateMap<CustomerDTO, CustomerUpdateCommand>();
+            //Customer
+            CreateMap<CustomerCreateDTO, CustomerCreateCommand>();
+            CreateMap<CustomerResponseDTO, GetCustomerByIdQuery>();
+            CreateMap<CustomerUpdateDTO, CustomerUpdateCommand>();
 
             CreateMap<SpecieDTO, SpecieCreateCommand>();
             CreateMap<SpecieDTO, SpecieUpdateCommand>();
