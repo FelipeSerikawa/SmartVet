@@ -1,8 +1,6 @@
-﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SmartVet.Application.DTOs;
 using SmartVet.Application.Interfaces;
 using SmartVet.Application.Mappings;
 using SmartVet.Application.Services;
@@ -22,8 +20,10 @@ namespace SmartVet.Infrastructure.IoC
             
             services.AddScoped<ISpecieService, SpecieService>();
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IAnimalService, AnimalService>();
             services.AddScoped<IBaseRepository<Specie>, BaseRepository<Specie>>();
             services.AddScoped<IBaseRepository<Customer>, BaseRepository<Customer>>();
+            services.AddScoped<IBaseRepository<Animal>, BaseRepository<Animal>>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

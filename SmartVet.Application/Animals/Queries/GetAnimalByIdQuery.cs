@@ -1,13 +1,13 @@
 ﻿using MediatR;
 using SmartVet.Domain.Entities;
 
-namespace SmartVet.Application.Species.Queries
+namespace SmartVet.Application.Animals.Queries
 {
-    public class GetSpecieByIdQuery : IRequest<Specie>
+    public class GetAnimalByIdQuery : IRequest<Animal>
     {
         public int Id { get; set; }
 
-        public GetSpecieByIdQuery(int id)
+        public GetAnimalByIdQuery(int id)
         {
             Id = id;
         }

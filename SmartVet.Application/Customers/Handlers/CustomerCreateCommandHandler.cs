@@ -2,11 +2,6 @@
 using SmartVet.Application.Customers.Commands;
 using SmartVet.Domain.Entities;
 using SmartVet.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartVet.Application.Customers.Handlers
 {

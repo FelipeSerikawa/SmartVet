@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartVet.Application.DTOs.Customer;
 using SmartVet.Application.Interfaces;
-using SmartVet.Application.Services;
-using SmartVet.Domain.Entities;
 
 namespace SmartVet.API.Controllers
 {

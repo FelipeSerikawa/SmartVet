@@ -1,6 +1,6 @@
-﻿namespace SmartVet.Application.Species.Commands
+﻿namespace SmartVet.Application.Animals.Commands
 {
-    public class SpecieCreateCommand : SpecieCommand
+    public class AnimalCreateCommand : AnimalCommand
     {
         public DateTime CreatedDate { get; set; }
         public int CreatedBy { get; set; }

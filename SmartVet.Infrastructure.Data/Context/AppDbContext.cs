@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartVet.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartVet.Infrastructure.Data.Context
 {
@@ -14,6 +9,7 @@ namespace SmartVet.Infrastructure.Data.Context
         
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Specie> Species { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

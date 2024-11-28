@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartVet.Domain.Entities
+﻿namespace SmartVet.Domain.Entities
 {
     public sealed class Animal : Base
     {
-        public Animal(int id, string name, int customerId, int specieId)
+        public Animal(string name, int customerId, int specieId, DateTime? dateOfBirth, float? weight)
         {
-            Id = id;
             Name = name;
             CustomerId = customerId;
             SpecieId = specieId;
+            DateOfBirth = dateOfBirth;
+            Weight = weight;
         }
 
         public int CustomerId { get; set; }

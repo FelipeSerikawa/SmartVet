@@ -1,5 +1,3 @@
-using SmartVet.Domain.Interfaces;
-using SmartVet.Infrastructure.Data.Repositories;
 using SmartVet.Infrastructure.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
