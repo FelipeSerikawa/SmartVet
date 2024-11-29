@@ -10,6 +10,7 @@ namespace SmartVet.Infrastructure.Data.Context
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Specie> Species { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

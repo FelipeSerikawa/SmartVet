@@ -18,12 +18,17 @@ namespace SmartVet.Infrastructure.IoC
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
             
+            //Services
             services.AddScoped<ISpecieService, SpecieService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IAnimalService, AnimalService>();
+            services.AddScoped<IRoleService, RoleService>();
+
+            //Repositories
             services.AddScoped<IBaseRepository<Specie>, BaseRepository<Specie>>();
             services.AddScoped<IBaseRepository<Customer>, BaseRepository<Customer>>();
             services.AddScoped<IBaseRepository<Animal>, BaseRepository<Animal>>();
+            services.AddScoped<IBaseRepository<Role>, BaseRepository<Role>>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

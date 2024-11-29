@@ -8,6 +8,9 @@ using SmartVet.Application.Species.Queries;
 using SmartVet.Application.DTOs.Animal;
 using SmartVet.Application.Animals.Commands;
 using SmartVet.Application.Animals.Queries;
+using SmartVet.Application.DTOs.Role;
+using SmartVet.Application.Roles.Commands;
+using SmartVet.Application.Roles.Queries;
 
 namespace SmartVet.Application.Mappings
 {
@@ -29,6 +32,11 @@ namespace SmartVet.Application.Mappings
             CreateMap<AnimalCreateDTO, AnimalCreateCommand>();
             CreateMap<AnimalResponseDTO, GetAnimalByIdQuery>();
             CreateMap<AnimalUpdateDTO, AnimalUpdateCommand>();
+
+            //Role
+            CreateMap<RoleCreateDTO, RoleCreateCommand>();
+            CreateMap<RoleResponseDTO, GetRoleByIdQuery>();
+            CreateMap<RoleUpdateDTO, RoleUpdateCommand>();
         }
     }
 }

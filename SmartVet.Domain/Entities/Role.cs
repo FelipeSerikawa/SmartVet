@@ -2,6 +2,10 @@
 {
     public sealed class Role : Base
     {
-        public required string Description { get; set; }
+        public Role(string description)
+        {
+            Description = description;
+        }
+        public string Description { get; set; }
     }
 }
