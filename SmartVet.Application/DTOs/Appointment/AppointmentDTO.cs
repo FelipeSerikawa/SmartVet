@@ -14,7 +14,7 @@ namespace SmartVet.Application.DTOs.Appointment
         public string? Treatment { get; set; }
         public Domain.Entities.Customer Customer { get; set; }
         public Domain.Entities.Animal Animal { get; set; }
-        public EmployeeDTO Employee { get; set; }
+        public Domain.Entities.Employee Employee { get; set; }
         public DateTime? CreatedDate { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime? LastModifiedDate { get; set; }

@@ -11,6 +11,9 @@ using SmartVet.Application.Animals.Queries;
 using SmartVet.Application.DTOs.Role;
 using SmartVet.Application.Roles.Commands;
 using SmartVet.Application.Roles.Queries;
+using SmartVet.Application.DTOs.Employee;
+using SmartVet.Application.Employees.Queries;
+using SmartVet.Application.Employees.Commands;
 
 namespace SmartVet.Application.Mappings
 {
@@ -37,6 +40,11 @@ namespace SmartVet.Application.Mappings
             CreateMap<RoleCreateDTO, RoleCreateCommand>();
             CreateMap<RoleResponseDTO, GetRoleByIdQuery>();
             CreateMap<RoleUpdateDTO, RoleUpdateCommand>();
+
+            //Employee
+            CreateMap<EmployeeCreateDTO, EmployeeCreateCommand>();
+            CreateMap<EmployeeResponseDTO, GetEmployeeByIdQuery>();
+            CreateMap<EmployeeUpdateDTO, EmployeeUpdateCommand>();
         }
     }
 }

@@ -23,12 +23,14 @@ namespace SmartVet.Infrastructure.IoC
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IAnimalService, AnimalService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
 
             //Repositories
             services.AddScoped<IBaseRepository<Specie>, BaseRepository<Specie>>();
             services.AddScoped<IBaseRepository<Customer>, BaseRepository<Customer>>();
             services.AddScoped<IBaseRepository<Animal>, BaseRepository<Animal>>();
             services.AddScoped<IBaseRepository<Role>, BaseRepository<Role>>();
+            services.AddScoped<IBaseRepository<Employee>, BaseRepository<Employee>>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

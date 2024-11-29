@@ -2,6 +2,7 @@
 using SmartVet.Application.DTOs;
 using SmartVet.Application.DTOs.Animal;
 using SmartVet.Application.DTOs.Customer;
+using SmartVet.Application.DTOs.Employee;
 using SmartVet.Application.DTOs.Role;
 using SmartVet.Application.DTOs.Specie;
 using SmartVet.Domain.Entities;
@@ -30,6 +31,11 @@ namespace SmartVet.Application.Mappings
             CreateMap<Role, RoleResponseDTO>().ReverseMap();
             CreateMap<Role, RoleCreateDTO>().ReverseMap();
             CreateMap<Role, RoleUpdateDTO>().ReverseMap();
+
+            //Employee
+            CreateMap<Employee, EmployeeResponseDTO>().ReverseMap();
+            CreateMap<Employee, EmployeeCreateDTO>().ReverseMap();
+            CreateMap<Employee, EmployeeUpdateDTO>().ReverseMap();
         }
     }
 }

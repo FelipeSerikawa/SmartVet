@@ -7,5 +7,6 @@
             Description = description;
         }
         public string Description { get; set; }
+        public ICollection<Employee> Employees { get; set; }
     }
 }
