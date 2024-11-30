@@ -11,8 +11,5 @@
             DateOfBirth = dateOfBirth;
             IdentificationDocument = identificationDocument;
         }
-
-        public ICollection<Animal>? Animals { get; set; }
-        public ICollection<Appointment>? Appointments { get; set; }
     }
 }

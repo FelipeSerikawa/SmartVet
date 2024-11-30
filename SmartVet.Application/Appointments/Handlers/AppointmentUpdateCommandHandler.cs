@@ -1,10 +1,12 @@
-﻿using SmartVet.Application.Appointments.Commands;
+﻿using MediatR;
+using SmartVet.Application.Animals.Commands;
+using SmartVet.Application.Appointments.Commands;
 using SmartVet.Domain.Entities;
 using SmartVet.Domain.Interfaces;
 
 namespace SmartVet.Application.Appointments.Handlers
 {
-    public class AppointmentUpdateCommandHandler
+    public class AppointmentUpdateCommandHandler : IRequestHandler<AppointmentUpdateCommand, Appointment>
     {
         private readonly IBaseRepository<Appointment> _baseRepository;
 
