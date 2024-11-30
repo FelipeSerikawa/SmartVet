@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SmartVet.Application.DTOs;
 using SmartVet.Application.DTOs.Animal;
+using SmartVet.Application.DTOs.Appointment;
 using SmartVet.Application.DTOs.Customer;
 using SmartVet.Application.DTOs.Employee;
 using SmartVet.Application.DTOs.Role;
@@ -36,6 +37,11 @@ namespace SmartVet.Application.Mappings
             CreateMap<Employee, EmployeeResponseDTO>().ReverseMap();
             CreateMap<Employee, EmployeeCreateDTO>().ReverseMap();
             CreateMap<Employee, EmployeeUpdateDTO>().ReverseMap();
+
+            //Appointment
+            CreateMap<Appointment, AppointmentResponseDTO>().ReverseMap();
+            CreateMap<Appointment, AppointmentCreateDTO>().ReverseMap();
+            CreateMap<Appointment, AppointmentUpdateDTO>().ReverseMap();
         }
     }
 }

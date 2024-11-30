@@ -24,6 +24,7 @@ namespace SmartVet.Infrastructure.IoC
             services.AddScoped<IAnimalService, AnimalService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
 
             //Repositories
             services.AddScoped<IBaseRepository<Specie>, BaseRepository<Specie>>();
@@ -31,6 +32,7 @@ namespace SmartVet.Infrastructure.IoC
             services.AddScoped<IBaseRepository<Animal>, BaseRepository<Animal>>();
             services.AddScoped<IBaseRepository<Role>, BaseRepository<Role>>();
             services.AddScoped<IBaseRepository<Employee>, BaseRepository<Employee>>();
+            services.AddScoped<IBaseRepository<Appointment>, BaseRepository<Appointment>>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

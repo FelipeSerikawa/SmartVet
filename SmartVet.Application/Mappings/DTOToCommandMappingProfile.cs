@@ -14,6 +14,9 @@ using SmartVet.Application.Roles.Queries;
 using SmartVet.Application.DTOs.Employee;
 using SmartVet.Application.Employees.Queries;
 using SmartVet.Application.Employees.Commands;
+using SmartVet.Application.DTOs.Appointment;
+using SmartVet.Application.Appointments.Commands;
+using SmartVet.Application.Appointments.Queries;
 
 namespace SmartVet.Application.Mappings
 {
@@ -45,6 +48,11 @@ namespace SmartVet.Application.Mappings
             CreateMap<EmployeeCreateDTO, EmployeeCreateCommand>();
             CreateMap<EmployeeResponseDTO, GetEmployeeByIdQuery>();
             CreateMap<EmployeeUpdateDTO, EmployeeUpdateCommand>();
+
+            //Appointment
+            CreateMap<AppointmentCreateDTO, AppointmentCreateCommand>();
+            CreateMap<AppointmentResponseDTO, GetAppointmentByIdQuery>();
+            CreateMap<AppointmentUpdateDTO, AppointmentUpdateCommand>();
         }
     }
 }
